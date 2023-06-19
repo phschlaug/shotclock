@@ -27,7 +27,7 @@ struct InformationView: View {
             .padding()
         List {
             Section(header: Text("General")) {
-                Text("Simple app to measure the 24 seconds in a basketball game")
+                Text(.init(self.fetchGeneralText()))
             }
             Section(header: Text("Tutorial")) {
                 let tutorialText = """
@@ -47,6 +47,14 @@ struct InformationView: View {
                 Text(.init(text))
             }
         }
+    }
+
+    private func fetchGeneralText() -> String {
+        var generalText: String = "Simple app to measure the 24 seconds in a basketball game"
+        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            generalText.append("\nVersion: \(appVersion)")
+        }
+        return generalText
     }
 }
 
