@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  shotclocktracker
+
+  Created by Philipp Schlaug on 22.06.23.
+  
+*/
+
+/* On Boarding View*/
+"GotIt"="Got It";
+"SwipeRightText"="A swipe to the right sets the shotclock to 24 seconds";
+"SwipeLeftText"="A swipe to the left sets the shotclock to 14 seconds";
+"TapText"="A tap start/stops the shotclock";
+
+/* Information View */
+"GeneralHeader"="General";
+"GeneralText"="Simple app to measure the 24 seconds in a basketball game";
+"BackgroundImageHeader"="Background Image";
+
+/* Main View */
+"SecAbriviation" = "Sec";
+

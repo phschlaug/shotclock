@@ -31,7 +31,7 @@ struct ContentView: View {
                         }
 
                     } label: {
-                        Label("Sec", systemImage: "plus.circle")
+                        Label(NSLocalizedString("SecAbriviation", comment: "Main View"), systemImage: "plus.circle")
                     }
                     .accessibilityIdentifier("addSecondButton")
                     .buttonStyle(CustomButtonStyle())
@@ -43,7 +43,7 @@ struct ContentView: View {
                             shotClockValue -= 1
                         }
                     }label: {
-                        Label("Sec", systemImage: "minus.circle")
+                        Label(NSLocalizedString("SecAbriviation", comment: "Main View"), systemImage: "minus.circle")
                     }
                     .accessibilityIdentifier("minusSecondButton")
                     .buttonStyle(CustomButtonStyle())
@@ -114,6 +114,9 @@ struct ContentView: View {
                     .resizable()
                     .onTapGesture {
                         self.isRunning.toggle()
+                        if self.shotClockValue == 0 {
+                            self.shotClockValue = 24
+                        }
                     }
                     .accessibilityIdentifier("BackgroundImage")
                     .gesture( DragGesture(minimumDistance: 0, coordinateSpace: .local)

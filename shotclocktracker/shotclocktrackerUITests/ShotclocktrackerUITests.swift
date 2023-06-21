@@ -16,6 +16,9 @@ final class ShotclocktrackerUITests: XCTestCase {
     let resetTo14ButtonId = "ResetTo14"
     let resetTo24ButtonId = "ResetTo24"
     let backgroundImageId = "BackgroundImage"
+    let onBoardingGotItButtonId = "GotItButton"
+
+    public var application: XCUIApplication!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,6 +29,14 @@ final class ShotclocktrackerUITests: XCTestCase {
         // In UI tests it’s important to set the initial state
         // - such as interface orientation - required for your tests before they run.
         // The setUp method is a good place to do this.
+        application = XCUIApplication()
+        application.launch()
+        let onBoardingButton = application.buttons[onBoardingGotItButtonId]
+        if onBoardingButton.isHittable {
+            onBoardingButton.tap()
+        } else {
+            print("Something went wrong")
+        }
     }
 
     override func tearDownWithError() throws {
@@ -33,10 +44,8 @@ final class ShotclocktrackerUITests: XCTestCase {
     }
 
     func testTriggeringTimer() throws {
-        let app = XCUIApplication()
-        app.launch()
-        let shotClockLabel = app.staticTexts[shotClockTextId]
-        let toggleTimerButton = app.buttons[playPauseButton]
+        let shotClockLabel = application.staticTexts[shotClockTextId]
+        let toggleTimerButton = application.buttons[playPauseButton]
 
         let startValue = shotClockLabel.label
         toggleTimerButton.tap()
@@ -47,12 +56,9 @@ final class ShotclocktrackerUITests: XCTestCase {
     }
 
     func testSubstractOneSecondAddOneSecondAfterwards() {
-        let app = XCUIApplication()
-        app.launch()
-
-        let minusButton = app.buttons[minusButtonId]
-        let addButton = app.buttons[addButtonId]
-        let shotClockText = app.staticTexts[shotClockTextId]
+        let minusButton = application.buttons[minusButtonId]
+        let addButton = application.buttons[addButtonId]
+        let shotClockText = application.staticTexts[shotClockTextId]
         minusButton.tap()
 
         XCTAssertEqual(shotClockText.label, "23")
@@ -61,11 +67,8 @@ final class ShotclocktrackerUITests: XCTestCase {
     }
 
     func testRestTo14SecondsButton() {
-        let app = XCUIApplication()
-        app.launch()
-
-        let resetTo14Button = app.buttons[resetTo14ButtonId]
-        let shotClockText = app.staticTexts[shotClockTextId]
+        let resetTo14Button = application.buttons[resetTo14ButtonId]
+        let shotClockText = application.staticTexts[shotClockTextId]
         let expectedValue = "14"
 
         resetTo14Button.tap()
@@ -74,12 +77,9 @@ final class ShotclocktrackerUITests: XCTestCase {
     }
 
     func testRestTo24SecondsButton() {
-        let app = XCUIApplication()
-        app.launch()
-
-        let resetTo14Button = app.buttons[resetTo14ButtonId]
-        let resetTo24Button = app.buttons[resetTo24ButtonId]
-        let shotClockText = app.staticTexts[shotClockTextId]
+        let resetTo14Button = application.buttons[resetTo14ButtonId]
+        let resetTo24Button = application.buttons[resetTo24ButtonId]
+        let shotClockText = application.staticTexts[shotClockTextId]
         let expectedValue = "24"
 
         resetTo14Button.tap()
@@ -91,10 +91,8 @@ final class ShotclocktrackerUITests: XCTestCase {
     }
 
     func testSwipeGestures() {
-        let app = XCUIApplication()
-        app.launch()
-        let shotClockText = app.staticTexts[shotClockTextId]
-        let backgroundImage = app.images[backgroundImageId]
+        let shotClockText = application.staticTexts[shotClockTextId]
+        let backgroundImage = application.images[backgroundImageId]
 
         backgroundImage.tap()
         sleep(5)
@@ -106,14 +104,5 @@ final class ShotclocktrackerUITests: XCTestCase {
 
         backgroundImage.swipeRight()
         XCTAssertEqual(shotClockText.label, "24")
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
     }
 }

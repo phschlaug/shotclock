@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ShotclocktrackerApp: App {
+    @AppStorage("isOnboarding") var isOnboarding = true
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isOnboarding {
+                OnBoardingView()
+            } else {
+                ContentView()
+            }
         }
     }
 }

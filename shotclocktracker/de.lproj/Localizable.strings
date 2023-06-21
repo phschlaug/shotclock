@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  shotclocktracker
+
+  Created by Philipp Schlaug on 22.06.23.
+  
+*/
+
+/* On Boarding View*/
+"GotIt"="Verstanden!";
+"SwipeRightText"="Nach rechts wischen setzt die Schussuhr auf 24 Sekunden";
+"SwipeLeftText"="Nach links wischen setzt die Schussuhr auf 14 Sekunden";
+"TapText"="Tippen startet/stopt die Schussuhr";
+
+/* Information View */
+"GeneralHeader"="Allgemein";
+"GeneralText"="Einfache App um die 24 Sekunden in einem Basketballspiel zu messen";
+"BackgroundImageHeader"="Hintergrundbild";
+
+/* Main View */
+"SecAbriviation" = "Sek";
