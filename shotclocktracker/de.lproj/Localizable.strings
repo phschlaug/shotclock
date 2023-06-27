@@ -8,8 +8,8 @@
 
 /* On Boarding View*/
 "GotIt"="Verstanden!";
-"SwipeRightText"="Nach rechts wischen setzt die Schussuhr auf 24 Sekunden";
-"SwipeLeftText"="Nach links wischen setzt die Schussuhr auf 14 Sekunden";
+"SwipeRightText"="Nach rechts Wischen setzt die Schussuhr auf 24 Sekunden";
+"SwipeLeftText"="Nach links Wischen setzt die Schussuhr auf 14 Sekunden";
 "TapText"="Tippen startet/stopt die Schussuhr";
 
 /* Information View */

@@ -61,8 +61,6 @@ struct ContentView: View {
                         }
                         if self.shotClockValue > 0 && self.isRunning {
                             self.shotClockValue -= 1
-                        } else {
-                            self.isRunning = false
                         }
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

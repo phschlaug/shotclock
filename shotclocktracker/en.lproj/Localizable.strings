@@ -8,8 +8,8 @@
 
 /* On Boarding View*/
 "GotIt"="Got It";
-"SwipeRightText"="A swipe to the right sets the shotclock to 24 seconds";
-"SwipeLeftText"="A swipe to the left sets the shotclock to 14 seconds";
+"SwipeRightText"="Swiping to the right sets the shotclock to 24 seconds";
+"SwipeLeftText"="Swiping to the left sets the shotclock to 14 seconds";
 "TapText"="A tap start/stops the shotclock";
 
 /* Information View */

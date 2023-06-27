@@ -17,6 +17,9 @@ final class ShotclocktrackerUITests: XCTestCase {
     let resetTo24ButtonId = "ResetTo24"
     let backgroundImageId = "BackgroundImage"
     let onBoardingGotItButtonId = "GotItButton"
+    // InformationView Ids
+    let informationViewAppIconId = "AppIconImage"
+    let infoButtonId = "ShowInformationToobarButton"
 
     public var application: XCUIApplication!
 
@@ -104,5 +107,12 @@ final class ShotclocktrackerUITests: XCTestCase {
 
         backgroundImage.swipeRight()
         XCTAssertEqual(shotClockText.label, "24")
+    }
+
+    func testOpenInformationView() {
+        let informationViewAppIcon = application.images[informationViewAppIconId]
+        let informationViewButton = application.buttons[infoButtonId]
+        informationViewButton.tap()
+        XCTAssertTrue(informationViewAppIcon.isHittable)
     }
 }

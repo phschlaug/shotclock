@@ -43,6 +43,7 @@
 		0461C1B82A449AB000F37D53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0461C1BA2A449AB600F37D53 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0461C1BB2A44A32000F37D53 /* UiLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiLocalizationTests.swift; sourceTree = "<group>"; };
+		04C9D60A2A48249100DFD896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		040E78512A37882B00613A1B /* shotclocktracker */ = {
 			isa = PBXGroup;
 			children = (
+				04C9D60A2A48249100DFD896 /* Info.plist */,
 				040E78522A37882B00613A1B /* ShotclocktrackerApp.swift */,
 				040E78542A37882B00613A1B /* ContentView.swift */,
 				040E78562A37882C00613A1B /* Assets.xcassets */,
@@ -402,6 +404,7 @@
 				DEVELOPMENT_TEAM = 7EYZK72C89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = shotclocktracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = 24Seconds;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -436,6 +439,7 @@
 				DEVELOPMENT_TEAM = 7EYZK72C89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = shotclocktracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = 24Seconds;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

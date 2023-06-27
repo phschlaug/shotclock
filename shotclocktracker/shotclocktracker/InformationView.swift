@@ -21,6 +21,7 @@ struct InformationView: View {
                     Image("logo")
                         .resizable()
                         .frame(width: 100, height: 100)
+                        .accessibilityIdentifier("AppIconImage")
 
                     Text("Version: \(appVersion ?? "n/a")")
                 }
