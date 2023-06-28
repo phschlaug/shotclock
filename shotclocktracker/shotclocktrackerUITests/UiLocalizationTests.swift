@@ -9,9 +9,6 @@ import XCTest
 
 final class UiLocalizationTests: XCTestCase {
 
-    private let infoButtonId = "ShowInformationToobarButton"
-    private let generalTextId = "GeneralText"
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -29,18 +26,16 @@ final class UiLocalizationTests: XCTestCase {
 
     func testGermanLocalization() throws {
         // This test is a simple check if the german language code gets loaded
-        let app = XCUIApplication()
-        app.launchArguments += ["-AppleLanguages", "(de)"]
-        app.launchArguments += ["-AppleLocale", "de_DE"]
-        app.launch()
+        let app = ShotClockApplication()
+        app.start(language: .german)
         let expectedText = "Einfache App um die 24 Sekunden in einem Basketballspiel zu messen"
-        let gotItButton = app.buttons["GotIt"]
+        let gotItButton = app.onBoardingPage.gotItButton
         if gotItButton.isHittable {
             gotItButton.tap()
         }
-        let infoButton = app.buttons[infoButtonId]
+        let infoButton = app.shotClockPage.informationViewButton
         infoButton.tap()
-        let generalInfoText = app.staticTexts[generalTextId]
+        let generalInfoText = app.informationPage.generalInformationText
         XCTAssertEqual(generalInfoText.label, expectedText)
     }
 }

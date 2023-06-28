@@ -17,6 +17,11 @@
 		0461C1AA2A435A6200F37D53 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461C1A92A435A6200F37D53 /* OnBoardingView.swift */; };
 		0461C1B72A449AB000F37D53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0461C1B92A449AB000F37D53 /* Localizable.strings */; };
 		0461C1BC2A44A32000F37D53 /* UiLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461C1BB2A44A32000F37D53 /* UiLocalizationTests.swift */; };
+		04B250C52A4B38AB0027DD5F /* ShotClockApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B250C42A4B38AB0027DD5F /* ShotClockApplication.swift */; };
+		04B250C72A4C85810027DD5F /* ShotClockPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B250C62A4C85810027DD5F /* ShotClockPage.swift */; };
+		04B250C92A4C85A10027DD5F /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B250C82A4C85A10027DD5F /* Page.swift */; };
+		04B250CB2A4C85C60027DD5F /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B250CA2A4C85C60027DD5F /* OnBoardingPage.swift */; };
+		04B250CD2A4C85E70027DD5F /* InformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B250CC2A4C85E70027DD5F /* InformationPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		0461C1B82A449AB000F37D53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0461C1BA2A449AB600F37D53 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0461C1BB2A44A32000F37D53 /* UiLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiLocalizationTests.swift; sourceTree = "<group>"; };
+		04B250C42A4B38AB0027DD5F /* ShotClockApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotClockApplication.swift; sourceTree = "<group>"; };
+		04B250C62A4C85810027DD5F /* ShotClockPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotClockPage.swift; sourceTree = "<group>"; };
+		04B250C82A4C85A10027DD5F /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		04B250CA2A4C85C60027DD5F /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		04B250CC2A4C85E70027DD5F /* InformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPage.swift; sourceTree = "<group>"; };
 		04C9D60A2A48249100DFD896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,10 +119,23 @@
 		040E786C2A37882D00613A1B /* shotclocktrackerUITests */ = {
 			isa = PBXGroup;
 			children = (
+				04B250C32A4B37270027DD5F /* AccessLayer */,
 				040E786D2A37882D00613A1B /* ShotclocktrackerUITests.swift */,
 				0461C1BB2A44A32000F37D53 /* UiLocalizationTests.swift */,
 			);
 			path = shotclocktrackerUITests;
+			sourceTree = "<group>";
+		};
+		04B250C32A4B37270027DD5F /* AccessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				04B250C42A4B38AB0027DD5F /* ShotClockApplication.swift */,
+				04B250C62A4C85810027DD5F /* ShotClockPage.swift */,
+				04B250C82A4C85A10027DD5F /* Page.swift */,
+				04B250CA2A4C85C60027DD5F /* OnBoardingPage.swift */,
+				04B250CC2A4C85E70027DD5F /* InformationPage.swift */,
+			);
+			path = AccessLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0461C1BC2A44A32000F37D53 /* UiLocalizationTests.swift in Sources */,
+				04B250CB2A4C85C60027DD5F /* OnBoardingPage.swift in Sources */,
+				04B250C72A4C85810027DD5F /* ShotClockPage.swift in Sources */,
 				040E786E2A37882D00613A1B /* ShotclocktrackerUITests.swift in Sources */,
+				04B250CD2A4C85E70027DD5F /* InformationPage.swift in Sources */,
+				04B250C52A4B38AB0027DD5F /* ShotClockApplication.swift in Sources */,
+				04B250C92A4C85A10027DD5F /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
