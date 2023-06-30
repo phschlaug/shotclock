@@ -8,7 +8,7 @@ The background image is a Photo by [Sayan Ghosh](https://unsplash.com/@7th_verse
 
 ||||
 |---|---|---|
-|![Onboarding View](./resources/screenshots/onbaordingview.png)|![MainView 24](./resources/screenshots/mainview_24.png)| ![Main View Running](./resources/screenshots/mainview_running.png)|
+|![Onboarding View](./resources/screenshots/onboardingview.png)|![MainView 24](./resources/screenshots/mainview_24.png)| ![Main View Running](./resources/screenshots/mainview_running.png)|
 
 ## Useful Links
 
