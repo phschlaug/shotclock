@@ -14,3 +14,7 @@ The background image is a Photo by [Sayan Ghosh](https://unsplash.com/@7th_verse
 
 * [Icon Kitchen](https://icon.kitchen)
 * [Unsplash](https://unsplash.com)
+
+## Special Thanks
+
+Special thanks to the creators/contributors to the [automatic-app-landing-page](https://github.com/emilbaehr/automatic-app-landing-page) repository.
